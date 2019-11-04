@@ -8,12 +8,9 @@ from qmgr import QueueManager
 
 
 parser = argparse.ArgumentParser(description='Karafun fair scheduler.')
-parser.add_argument('-v', '--verbose', action='store_true', dest='verbose',
-										help='enable logging')
-parser.add_argument('--hide-singers', action='store_true',
-										help='hide who queued each song')
-parser.add_argument('channel',
-										help='karafun session id')
+parser.add_argument('-v', '--verbose', action='store_true', dest='verbose', help='enable logging')
+parser.add_argument('--hide-singers', action='store_true', help='hide who queued each song')
+parser.add_argument('channel', help='karafun session id')
 args = parser.parse_args()
 
 
