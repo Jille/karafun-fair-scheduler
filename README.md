@@ -28,3 +28,5 @@ If you enable `--hide-singers`, the tool will deduplicate any songs that are que
 If you enable `--hide-singers`, restarting the tool without emptying the queue will cause undefined behavior.
 
 Queueing a song with your name and an exclamation mark basically treats the two songs as one. It should probably count as multiple songs instead, and push your further songs back.
+
+^C (ctrl-c) doesn't work to kill the tool. I believe this to be a python-socketio bug and am too lazy to debug it. Try ^\ (ctrl-\) instead.
