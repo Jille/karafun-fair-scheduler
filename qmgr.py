@@ -45,7 +45,7 @@ class QueueManager(object):
 			self.singerRotation = self.singerRotation[1:] + self.singerRotation[:1]
 
 		# If you don't have anything queued, you lose your place in the scheduler.
-		self.singerRotation = filter(lambda singer: singer in singerQueues, self.singerRotation)
+		self.singerRotation = list(filter(lambda singer: singer in singerQueues, self.singerRotation))
 
 		if self.hideSingers:
 			# Deduplicate songs, keeping the first.
