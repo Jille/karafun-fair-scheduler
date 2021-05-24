@@ -101,5 +101,5 @@ def serverUnreacheable():
 def disconnect():
 	print('Disconnected from server.')
 
-sio.connect('https://www.karafun.com/?remote=kf%s' % args.channel)
+sio.connect('https://www.karafun.com/socket.io/?remote=kf%s' % args.channel)
 sio.wait()
